@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: rgb(208, 213, 218);
+        }
+        .container{
+            margin: auto;
+            width: 340px;
+            height: 260px;
+            background-color: #fff;
+            margin-top: 8%;
+            padding: 2%;
+            border-radius: 5%;
+        }
+        h2{
+            text-align: center;
+            padding-bottom: 7%;
+        }
+        .submit{
+            display: block;
+            margin-top: 7%;
+            width: 282px;
+            background-color: blue;
+            color: #fff;
+            font: 15px sans-serif;
+        }
+        select{
+            height: 35px;
+            border-radius: 5px;
+            border: 0.5px solid rgb(146, 141, 141);
+        }
+        input{
+            width: 120px;
+            height: 35px;
+            border-radius: 5px;
+            border: 0.5px solid rgb(146, 141, 141);
+        }
+        .result{
+            margin-top: 7%;
+            width: 282px;
+            padding-left: 8px;
+            border: 0.8px dotted rgb(146, 141, 141);
+           
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Mini Calculator</h2>
+        <input type="number" id="num1" class="num1">
+        <select id="operators" class="operators"> 
+            <option value="add">+</option>
+            <option value="sub">-</option>
+            <option value="mul">*</option>
+            <option value="div">/</option>
+            <option value="mol">%</option>
+        </select>
+        <input type="number" id="num2" class="num2">
+        <input type="submit" id="submit" class="submit" value="Calculate Amount">
+        <input type="text" id="result" class="result" placeholder="Result: ">
+    </div>
+    <script>
+
+    </script>
+</body>
+</html>

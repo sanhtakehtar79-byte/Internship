@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+       .card{
+        display: flex;
+        gap: 80px;
+        width: 600px;
+        height: 330px;
+        background-color: antiquewhite;
+        justify-content: center;
+        margin: auto;
+        border-radius: 25px;
+
+       }
+       .left{
+        display: flex;
+        flex-direction: column;
+        line-height: 30px;
+       }
+        .rightbox{
+        background-color: rgb(45, 235, 7);
+        }
+        input{
+            border-radius: 10px;
+        }
+        
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div class="card">
+        <section class="left">
+            <h2> Update variables</h2> 
+
+            <label for="nameInput" id="nameInput">Name (String):</label>
+            <input type="text">
+            
+            <label for="ageInput">Age (Number):</label>
+            <input type="number">
+            
+            <label for="checkInput">VIP Status (Boolean):</label>
+            <input type="checkbox">
+            
+            <label for="colorInput"></label>Card Color:</label>
+            <input type="color" style="height: 5px; width: 50px;">
+        </section>
+        <section class="right">
+            <h2> Live DOM Output</Output></h2> 
+            <div class="rightbox">
+                <p style="border: 5px;">VIP MEMBER</p>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
