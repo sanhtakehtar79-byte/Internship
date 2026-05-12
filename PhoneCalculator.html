@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <Style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: rgb(177, 190, 190);
+        }
+        .main{
+            margin: auto;
+            margin-top: 5%;
+            width: 240px;
+            height: 390px;
+            background-color: #fff;
+            border-radius: 5%;
+            
+        }
+        .buttonContainer{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            width: 200px;
+            margin: auto;
+            margin-top: 6%;
+            
+        }
+        button{
+            margin: 5px;
+            height: 35px;
+            width: 35px;
+            border-radius: 53%;
+            border: none;
+            background-color: rgb(212, 227, 240);
+            color: rgb(105, 105, 228)
+        }
+        .display{
+            width: 200px;
+            height: 140px;
+            background-color: #fff;
+            border: none;
+            margin: auto; 
+            padding-top: 20px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            overflow: hidden;
+            font-size: 23px;
+               
+        }
+        .clear,.delete ,.div, .mul, .sub, .add{
+            color: red;
+        }
+        .equ{
+            background-color: red;
+            color: #fff;
+        }
+        .display{
+            color: rgb(105, 105, 228);
+        }
+        .cursor{
+            font-size: 30px;
+            color: rgb(212, 227, 240);
+        }
+
+    </Style>
+</head>
+<body>
+    <div class="main">
+        <div class="display" id="display"><span id="num" class="num"></span>
+            <span id="cursor" class="cursor">|</span>
+        </div>
+        <div class="buttonContainer">
+            <button id="clear" class="clear" onclick="Textclear()">C</button>
+            <button id="delete" class="delete" onclick="Textdelete()"><i class="fa-solid fa-delete-left"></i></button>
+            <button id="mol" class="mol" onclick="insertoperator('%')">%</button>
+            <button id="div" class="div" onclick="insertoperator('/')"><i class="fa-solid fa-divide"></i></button>
+            <button id="seven" class="seven" onclick="insertnum('7')">7</button>
+            <button id="eight" class="eight" onclick="insertnum('8')">8</button>
+            <button id="nine" class="nine" onclick="insertnum('9')">9</button>
+            <button id="mul" class="mul" onclick="insertoperator('*')"><i class="fa-solid fa-xmark"></i></button>
+            <button id="four" class="four" onclick="insertnum('4')">4</button>
+            <button id="five" class="five" onclick="insertnum('5')">5</button>
+            <button id="six" class="six" onclick="insertnum('6')">6</button>
+            <button id="sub" class="sub" onclick="insert('-')"><i class="fa-solid fa-minus"></i></button>
+            <button id="one" class="one" onclick="insertnum('1')">1</button>
+            <button id="two" class="two" onclick="insertnum('2')">2</button>
+            <button id="three" class="three" onclick="insertnum('3')">3</button>
+            <button id="add" class="add" onclick="insertoperator('+')"><i class="fa-solid fa-plus"></i></button>
+            <button id="par" class="par" onclick="insertoperator('()')">()</button>
+            <button id="zero" class="zero" onclick="insertnum('0')">0</button>
+            <button id="point" class="point" onclick="insertoperator('.')">.</button>
+            <button id="equ" class="equ"><i class="fa-solid fa-equals"></i></button>
+        </div>
+    </div>
+    <script>
+        const Display= document.getElementById("num");
+
+        function insertnum(value){
+            Display.innerText+=value;
+        }
+        function Textclear(){
+            Display.innerText="";
+        }
+        function Textdelete(){
+            let text= Display.innerText;
+            if (text.length>0){
+                 Display.innerText=text.slice(0,-1);
+            }
+            if (text.length==0){
+                Display.innerText="";
+            }
+        }
+     
+    </script>
+</body>
+</html>
